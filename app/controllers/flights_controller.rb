@@ -4,11 +4,7 @@ class FlightsController < ApplicationController
   # GET /flights
   # GET /flights.json
   def index
-<<<<<<< HEAD
-    @flights = Flight.all.reverse
-=======
     @flights = Flight.order('date')
->>>>>>> 8962738e9d29fd57a26f43ef2225125ae6bf3029
   end
 
   # GET /flights/1
