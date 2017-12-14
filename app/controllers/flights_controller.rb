@@ -5,14 +5,14 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.order('date')
-    render :json => @flights.to_json( :include => [:airplane, :reservations] )
+    render :json => @flights.to_json( :include => [ :airplane, :reservations ] )
   end
 
   # GET /flights/1
   # GET /flights/1.json
   def show
     flight = Flight.find params[:id]
-    render :json => flight.to_json( :include => [:airplane, :reservations] )
+    render :json => flight.to_json( :include => [ :airplane, :reservations ] )
   end
 
   # GET /flights/new
